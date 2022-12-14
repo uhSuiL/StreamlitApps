@@ -106,6 +106,7 @@ if __name__ == '__main__':
         st.write(f"平均等待时间: {analysis['avg']: .2f} min")
         st.write(f"最长等待时间: {analysis['max']: .2f} min")
         st.write(f"等待时间超过2min的概率: {analysis['over_2_min'] * 100 / analysis['total']: .2f}%")
+        st.write(f" ( 平均接待顾客人数: {int(analysis['total'] / n_epoch)}人 ) ")
         
         with st.spinner("Drawing Picture..."):
             figure = Simulation.visualize(result)
